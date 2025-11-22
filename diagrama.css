@@ -1,0 +1,57 @@
+ .container-diagrama{
+    padding: 50px 20px;
+    max-width: 425px; /*apagar*/
+ } 
+
+ .diagrama{
+    border: 2px solid orange;
+    border-radius: 8px;
+ }
+
+ .diagrama h2, .diagrama span{
+    text-align: center;
+ }
+
+ .diagrama h2{
+    margin-top: 2rem;
+    font-size: 1.5em;
+ }
+
+ .diagrama span{
+    padding-top: 0em;
+    padding-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+ .diagrama span{
+    display: block;
+ }
+
+ .diagrama ul{
+    padding: .5em 0;
+    display: flex;
+    gap: .9rem;
+ }
+
+ .diagrama li{
+    display: flex;
+    gap: 5px;
+ }
+
+ .diagrama li i{
+    background-color: orange;
+    font-size: 1.8rem;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    flex: 0 0 35px;
+ }
+
+ .diagrama li p{
+    font-size: 12px;
+    line-height: 100%;
+ }

@@ -1,0 +1,202 @@
+*{
+  padding: 0;
+  margin: 0; 
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: sans-serif;
+  list-style: none;
+  text-decoration: none; 
+} 
+
+:root{
+  --light: #ffffff;
+  --gray-100: #eef1f5;
+  --warning: #FFD500;
+  --blue: #1e3a8a;
+  --dark: #0f172a;
+  --blue-100: #3b82f6;
+  --box-shadow-100: 0 0 20px rgba(0, 0, 0, 0.16);
+
+  --border-radius-100: .6rem;
+
+  --font-icone-card-100: 2rem;
+  --font-icone-card-300: 3.5rem;
+
+  --font-md: 20px;
+  --font-xl: 28px;
+  --font-h1: 36px;
+  
+  --padding-100: .6rem;
+  --padding-200: 1rem;
+  --padding-300: 1.5rem;
+  --padding-400: 2rem;
+  --padding-500: 3rem;
+  --padding-600: 3.8rem;
+}
+
+body{
+  background: var(--gray-100);
+}
+
+.container{
+  padding: 0 var(--padding-200);
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+header{
+  box-shadow: var(--box-shadow-100);
+  background-color: var(--blue);
+  padding: var(--padding-100) 0;
+}
+
+.logo i{
+  color: var(--light);
+  font-size: var(--font-icone-card-100);
+}
+
+.logo span{
+  display: none;
+}
+
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+nav ul{
+  display: flex;
+  gap: 22px;
+}
+
+nav ul li a{
+  color: var(--light);
+}
+
+nav ul li span{
+  display: none;
+}
+
+.heroGrid{
+  padding: var(--padding-300) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: var(--border-radius-100);
+  box-shadow: var(--box-shadow-100);
+  overflow: hidden;
+  padding-bottom: var(--padding-500);
+  height: 100%;
+}
+
+.card .header{
+  background: var(--blue-100);
+  padding: var(--padding-600);
+}
+
+.card i{
+  margin: 0 auto;
+  font-size: var(--font-icone-card-300);
+  color: var(--light);
+}
+
+.card h2{
+  font-size: var(--font-md);
+  padding: var(--padding-200) var(--padding-100);
+}
+
+.card p{
+  padding: 0 var(--padding-300);
+  line-height: 160%;
+}
+
+/* section busque a linha de atuação -mobile*/
+#linguagem{
+  padding: var(--padding-500) 0;
+  color: var(--light);
+}
+
+.bg-dark{
+  background-color: var(--dark);
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .5rem;
+  background: var(--warning);
+  padding: var(--padding-300);
+  border-radius: var(--border-radius-100);
+}
+
+.grid h3{
+  font-size: var(--font-h1);
+}
+
+.grid select, .grid button{
+  padding: var(--padding-100);
+  width: 100%;
+}
+
+.grid button{
+  width: 100%;
+  background-color: var(--blue-100);
+  color: var(--light);
+  border: 0;
+  border-radius: var(--border-radius-100);
+  cursor: pointer;
+}
+/* fim da section busque a linha de atuação  -mobile*/
+
+
+@media (min-width: 576px){
+  .logo{
+    display: flex;
+    align-items: center;
+  }
+
+  .logo span{
+    color: var(--light);
+    font-weight: bold;
+    font-size: 2rem;
+    display: block;
+  }
+
+  nav ul li a{
+    display: flex;
+    gap: 5px;
+  }
+
+  nav ul li span{
+    display: block;
+  }
+
+  .heroGrid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* section busque a linha de atuação - tablet*/
+  .grid{
+    grid-template-columns: 2fr 2fr 1fr;
+  }
+
+  .grid h3{
+    grid-column: 1/-1;
+  }
+  /* fim section busque a linha de atuação - tablet*/
+}
+
+@media (min-width: 992px){
+  .heroGrid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
